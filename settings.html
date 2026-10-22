@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Stackly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<!-- DASHBOARD - SECTION -->
+    <section class="dashboard-section">
+        <div class="dash-full">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <a href="dashboard.html" class="dash-mobile-logo" aria-label="Stackly home"><img src="images/stackly logo.webp" alt="Stackly"></a>
+                    <div class="dash-hamburger" id="dashMenuToggle" title="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                <div class="dashboard-page-title">
+                    <h1>Settings</h1>
+                    <p>Update your profile, password and notification preferences.</p>
+                </div>
+            </div>
+            <!-- Dashboard Layout -->
+            <div class="dash-layout">
+                <!-- Sidebar -->
+                <aside class="dash-sidebar">
+                    <div class="dash-sidebar-logo">
+                        <a href="dashboard.html" aria-label="Stackly home"><img src="images/stackly logo.webp" alt="Stackly"></a>
+                        <button type="button" class="dash-sidebar-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="dash-sidebar-profile">
+                        <div class="dash-sidebar-avatar">J</div>
+                        <div>
+                            <h4>Jordan Miller</h4>
+                            <span>Pro Developer</span>
+                        </div>
+                    </div>
+                    <ul class="dash-menu">
+                        <li class="dash-menu-item">
+                            <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                        </li>
+                        <li class="dash-menu-item">
+                            <a href="bookings.html"><i class="fas fa-calendar-alt"></i>API Access</a>
+                        </li>
+                        <li class="dash-menu-item">
+                            <a href="payments.html"><i class="fas fa-credit-card"></i>Payments</a>
+                        </li>
+                        <li class="dash-menu-item active">
+                            <a href="settings.html"><i class="fas fa-cog"></i>Settings</a>
+                        </li>
+                    </ul>
+                    <a href="login.html" class="dash-menu-logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </aside>
+                <!-- Main Content -->
+                <div class="dashboard-grid">
+                    <!-- Main Column -->
+                    <div class="dashboard-main">
+                        <!-- Profile Information -->
+                        <div class="dash-card animate-on-scroll from-left">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-user-edit"></i> Profile Information</h3>
+                            </div>
+                            <form class="settings-form" id="profileForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="settingsName">Full Name *</label>
+                                        <input type="text" id="settingsName" value="Jordan Miller">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="settingsEmail">Email Address *</label>
+                                        <input type="email" id="settingsEmail" value="jordan.miller@email.com">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="settingsPhone">Phone Number</label>
+                                        <input type="tel" id="settingsPhone" value="+1 (555) 987-6543">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="settingsLocation">Location</label>
+                                        <input type="text" id="settingsLocation" value="Brooklyn, NY">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                            </form>
+                        </div>
+                        <!-- Notification Preferences -->
+                        <div class="dash-card animate-on-scroll from-left">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-bell"></i> Notification Preferences</h3>
+                            </div>
+                            <div class="toggle-list">
+                                <div class="toggle-item">
+                                    <div class="toggle-item-info">
+                                        <h4>Session Reminders</h4>
+                                        <p>Get notified 1 hour before your booked sessions.</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="toggle-item">
+                                    <div class="toggle-item-info">
+                                        <h4>Payment Receipts</h4>
+                                        <p>Receive an email receipt for every payment.</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="toggle-item">
+                                    <div class="toggle-item-info">
+                                        <h4>Promotions & Offers</h4>
+                                        <p>Get exclusive developer deals and seasonal offers.</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="toggle-item">
+                                    <div class="toggle-item-info">
+                                        <h4>Newsletter</h4>
+                                        <p>Monthly newsletter with tips and updates.</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Change Password -->
+                        <div class="dash-card animate-on-scroll from-left">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-lock"></i> Change Password</h3>
+                            </div>
+                            <form class="settings-form" id="passwordForm">
+                                <div class="form-group">
+                                    <label for="currentPassword">Current Password *</label>
+                                    <input type="password" id="currentPassword" placeholder="Enter current password">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="newPassword">New Password *</label>
+                                        <input type="password" id="newPassword" placeholder="Enter new password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="confirmPassword">Confirm New Password *</label>
+                                        <input type="password" id="confirmPassword" placeholder="Re-enter new password">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Update Password</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Sidebar Column -->
+                    <div class="dashboard-sidebar">
+                        <!-- Quick Actions -->
+                        <div class="dash-card animate-on-scroll from-right">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                            </div>
+                            <div class="quick-actions">
+                                <a href="dashboard.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                    <span>Dashboard</span>
+                                </a>
+                                <a href="bookings.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-calendar-alt"></i></div>
+                                    <span>API Access</span>
+                                </a>
+                                <a href="payments.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-credit-card"></i></div>
+                                    <span>Payments</span>
+                                </a>
+                                <a href="contact.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-headset"></i></div>
+                                    <span>Support</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Membership Card -->
+                        <div class="dash-card animate-on-scroll from-right">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-crown"></i> My Developership</h3>
+                                <button class="dash-btn-text">Upgrade <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                            <div class="membership-content">
+                                <span class="membership-plan-badge">Pro Plan</span>
+                                <div class="membership-price">$89<span>/month</span></div>
+                                <div class="membership-renewal">Renews on <strong>Oct 1, 2026</strong></div>
+                                <div class="membership-usage">
+                                    <div class="usage-item">
+                                        <div class="usage-info"><span>Group Classes Used</span><strong>3 / 4</strong></div>
+                                        <div class="usage-bar"><div class="usage-fill" style="width: 75%;"></div></div>
+                                    </div>
+                                    <div class="usage-item">
+                                        <div class="usage-info"><span>API Experting Sessions Used</span><strong>1 / 2</strong></div>
+                                        <div class="usage-bar"><div class="usage-fill" style="width: 50%;"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>

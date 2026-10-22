@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Access - Stackly Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<!-- DASHBOARD - SECTION -->
+    <section class="dashboard-section">
+        <div class="dash-full">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <a href="admin.html" class="dash-mobile-logo" aria-label="Stackly home"><img src="images/stackly logo.webp" alt="Stackly"></a>
+                    <div class="dash-hamburger" id="dashMenuToggle" title="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                <div class="dashboard-page-title">
+                    <h1>API Access</h1>
+                    <p>Track all session API access, statuses and developer activity.</p>
+                </div>
+            </div>
+            <!-- Dashboard Layout -->
+            <div class="dash-layout">
+                <!-- Sidebar -->
+                <aside class="dash-sidebar">
+                    <div class="dash-sidebar-logo">
+                        <a href="admin.html" aria-label="Stackly home"><img src="images/stackly logo.webp" alt="Stackly"></a>
+                        <button type="button" class="dash-sidebar-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="dash-sidebar-profile">
+                        <div class="dash-sidebar-avatar">D</div>
+                        <div>
+                            <h4>Daniel Reed</h4>
+                            <span>Administrator</span>
+                        </div>
+                    </div>
+                    <ul class="dash-menu">
+                        <li class="dash-menu-item">
+                            <a href="admin.html"><i class="fas fa-tachometer-alt"></i>Admin</a>
+                        </li>
+                        <li class="dash-menu-item">
+                            <a href="admin-members.html"><i class="fas fa-users"></i>Developers</a>
+                        </li>
+                        <li class="dash-menu-item active">
+                            <a href="admin-bookings.html"><i class="fas fa-calendar-alt"></i>API Access</a>
+                        </li>
+                        <li class="dash-menu-item">
+                            <a href="admin-events.html"><i class="fas fa-calendar-check"></i>API Releases</a>
+                        </li>
+                        <li class="dash-menu-item">
+                            <a href="admin-settings.html"><i class="fas fa-cog"></i>Settings</a>
+                        </li>
+                    </ul>
+                    <a href="login.html" class="dash-menu-logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </aside>
+                <!-- Main Content -->
+                <div class="dashboard-grid">
+                    <!-- Main Column -->
+                    <div class="dashboard-main">
+                        <!-- Booking Stats -->
+                        <div class="dash-stats-grid animate-on-scroll">
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-calendar-day"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">24</span>
+                                    <span class="dash-stat-label">API Access Today</span>
+                                </div>
+                                <span class="stat-trend up"><i class="fas fa-arrow-up"></i> 6</span>
+                            </div>
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-hourglass-half"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">87</span>
+                                    <span class="dash-stat-label">Upcoming</span>
+                                </div>
+                                <span class="stat-trend up"><i class="fas fa-arrow-up"></i> 12</span>
+                            </div>
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-check-double"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">318</span>
+                                    <span class="dash-stat-label">Completed</span>
+                                </div>
+                                <span class="stat-trend up"><i class="fas fa-arrow-up"></i> 24</span>
+                            </div>
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-times-circle"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">12</span>
+                                    <span class="dash-stat-label">Cancelled</span>
+                                </div>
+                                <span class="stat-trend down"><i class="fas fa-arrow-down"></i> 3</span>
+                            </div>
+                        </div>
+                        <!-- Bookings Table -->
+                        <div class="dash-card animate-on-scroll from-left">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-calendar-alt"></i> All API Access</h3>
+                                <div class="dash-header-tools">
+                                    <div class="dash-search">
+                                        <i class="fas fa-search"></i>
+                                        <input type="text" id="adminBookingSearch" placeholder="Search bookings...">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-wrapper">
+                                <table class="dash-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Developer</th>
+                                            <th>Activity</th>
+                                            <th>Date</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+<div class="table-user">
+                                                    <span class="table-avatar">J</span>
+                                                    <div>
+                                                        <strong>Jordan Miller</strong>
+                                                        <span>jordan.miller@email.com</span>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>Private Session</td>
+                                            <td>Sep 14, 6:00 PM</td>
+                                            <td><span class="status-badge confirmed">Confirmed</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button title="Edit"><i class="fas fa-edit"></i></button>
+                                                    <button title="Delete"><i class="fas fa-trash"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+<div class="table-user">
+                                                    <span class="table-avatar">S</span>
+                                                    <div>
+                                                        <strong>Samantha Lee</strong>
+                                                        <span>sam.lee@email.com</span>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>Studio Class</td>
+                                            <td>Sep 18, 7:30 AM</td>
+                                            <td><span class="status-badge confirmed">Confirmed</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button title="Edit"><i class="fas fa-edit"></i></button>
+                                                    <button title="Delete"><i class="fas fa-trash"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+<div class="table-user">
+                                                    <span class="table-avatar">A</span>
+                                                    <div>
+                                                        <strong>Alex Chen</strong>
+                                                        <span>alex.chen@email.com</span>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>Court #3</td>
+                                            <td>Sep 22, 5:00 PM</td>
+                                            <td><span class="status-badge pending">Pending</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button title="Edit"><i class="fas fa-edit"></i></button>
+                                                    <button title="Delete"><i class="fas fa-trash"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+<div class="table-user">
+                                                    <span class="table-avatar">M</span>
+                                                    <div>
+                                                        <strong>Marcus Johnson</strong>
+                                                        <span>marcus.j@email.com</span>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>Technique Session</td>
+                                            <td>Sep 26, 9:00 AM</td>
+                                            <td><span class="status-badge pending">Pending</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button title="Edit"><i class="fas fa-edit"></i></button>
+                                                    <button title="Delete"><i class="fas fa-trash"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+<div class="table-user">
+                                                    <span class="table-avatar">E</span>
+                                                    <div>
+                                                        <strong>Emily Davis</strong>
+                                                        <span>emily.davis@email.com</span>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>Yoga & Mobility</td>
+                                            <td>Aug 20, 8:00 AM</td>
+                                            <td><span class="status-badge expired">Cancelled</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button title="Edit"><i class="fas fa-edit"></i></button>
+                                                    <button title="Delete"><i class="fas fa-trash"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sidebar Column -->
+                    <div class="dashboard-sidebar">
+                        <!-- Today's Schedule -->
+                        <div class="dash-card animate-on-scroll from-right">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-clock"></i> Today's Schedule</h3>
+                            </div>
+                            <div class="admin-events-list">
+                                <div class="admin-event-item">
+                                    <div class="admin-event-date">
+                                        <span class="event-day">09</span>
+                                        <span class="event-month">AM</span>
+                                    </div>
+                                    <div class="admin-event-info">
+                                        <h4>Group Security Class</h4>
+                                        <p><i class="fas fa-users"></i> 18 developers</p>
+                                    </div>
+                                </div>
+                                <div class="admin-event-item">
+                                    <div class="admin-event-date">
+                                        <span class="event-day">11</span>
+                                        <span class="event-month">AM</span>
+                                    </div>
+                                    <div class="admin-event-info">
+                                        <h4>Observability Clinic</h4>
+                                        <p><i class="fas fa-users"></i> 12 developers</p>
+                                    </div>
+                                </div>
+                                <div class="admin-event-item">
+                                    <div class="admin-event-date">
+                                        <span class="event-day">02</span>
+                                        <span class="event-month">PM</span>
+                                    </div>
+                                    <div class="admin-event-info">
+                                        <h4>Developer Portal Court 3</h4>
+                                        <p><i class="fas fa-users"></i> 4 developers</p>
+                                    </div>
+                                </div>
+                                <div class="admin-event-item">
+                                    <div class="admin-event-date">
+                                        <span class="event-day">06</span>
+                                        <span class="event-month">PM</span>
+                                    </div>
+                                    <div class="admin-event-info">
+                                        <h4>API Gateway Private</h4>
+                                        <p><i class="fas fa-users"></i> 1 developer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Quick Actions -->
+                        <div class="dash-card animate-on-scroll from-right">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                            </div>
+                            <div class="quick-actions">
+                                <a href="admin.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                    <span>Dashboard</span>
+                                </a>
+                                <a href="admin-members.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-users"></i></div>
+                                    <span>Developers</span>
+                                </a>
+                                <a href="admin-events.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-calendar-check"></i></div>
+                                    <span>API Releases</span>
+                                </a>
+                                <a href="admin-settings.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-cog"></i></div>
+                                    <span>Settings</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>

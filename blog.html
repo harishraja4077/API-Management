@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Stackly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/stackly logo.webp" alt="Stackly" class="logo-img">
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html" class="mobile-menu-logo"><img src="images/stackly logo.webp" alt="Stackly"></a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="contact.html">Contact</a>
+                <div class="nav-cta">
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    <a href="login.html" class="btn-login">Login</a>
+                </div>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="page-hero-bg">
+            <img src="./images/blog-page-hero.webp" alt="Athlete working out in the gym">
+        </div>
+        <div class="container">
+            <h1>Our Blog</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                <a href="#" class="active">Blog</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED POST - SECTION 2 -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="subtitle">Featured Article</div>
+                <h2>Featured API Insight</h2>
+            </div>
+
+            <div class="featured-post animate-on-scroll scale-in">
+                <div class="featured-image">
+                    <a href="404.html"><img src="./images/blog-featured.webp" alt="Strength training on the leg press"></a>
+                    <a href="404.html" class="play-badge"><i class="fas fa-play"></i></a>
+                </div>
+                <div class="featured-content">
+                    <span class="featured-label"><i class="fas fa-crown"></i> Editor's Choice</span>
+                    <h2>The Complete Guide To API Security, Governance & Reliability</h2>
+                    <p>Learn how top developers stay injury-free with proven recovery protocols - from sleep optimization to foam rolling, active recovery, and nutrition strategies that speed up muscle repair.</p>
+                    <div class="featured-meta">
+                        <span><i class="far fa-calendar"></i> Sep 5, 2026</span>
+                        <span><i class="far fa-user"></i> By API Expert David</span>
+                        <span><i class="far fa-clock"></i> 8 min read</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG CONTENT - SECTION 3 -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="subtitle">Latest Articles</div>
+                <h2>API News & Insights</h2>
+                <p>Architecture guidance, platform updates, API design patterns, security practices, and developer experience insights.</p>
+            </div>
+
+            <div class="blog-grid">
+                <div class="blog-posts">
+                    <article class="blog-card animate-on-scroll">
+                        <div class="blog-image">
+                            <img src="./images/blog-post-core-strength.webp" alt="Dumbbells on the gym floor">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> Sep 1, 2026</span>
+                                <span><i class="far fa-user"></i> By API Expert Mark</span>
+                            </div>
+                            <div class="blog-card-taxonomy">
+                                <span class="blog-category">Security</span>
+                                <span class="blog-tag">Core Strength</span>
+                                <span class="blog-tag">Workout</span>
+                            </div>
+                            <h3><a href="404.html">10 Essential Exercises For Building Core Strength</a></h3>
+                            <p>Discover the top 10 exercises that will build a rock-solid core, improve your posture, and boost your athletic performance across all APIs.</p>
+                            <a href="404.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card animate-on-scroll">
+                        <div class="blog-image">
+                            <img src="./images/blog-post-freestyle.webp" alt="Swimmer in the pool">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> Aug 25, 2026</span>
+                                <span><i class="far fa-user"></i> By API Expert Sarah</span>
+                            </div>
+                            <div class="blog-card-taxonomy">
+                                <span class="blog-category">Observability</span>
+                                <span class="blog-tag">Freestyle</span>
+                                <span class="blog-tag">Technique</span>
+                            </div>
+                            <h3><a href="404.html">How To Master The Freestyle Stroke: Complete Guide</a></h3>
+                            <p>Learn practical observability patterns for tracking API latency, errors, dependencies, adoption, and service-level objectives.</p>
+                            <a href="404.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card animate-on-scroll">
+                        <div class="blog-image">
+                            <img src="./images/blog-post-serve-tips.webp" alt="Tennis player resting on court">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> Aug 18, 2026</span>
+                                <span><i class="far fa-user"></i> By API Expert Elena</span>
+                            </div>
+                            <div class="blog-card-taxonomy">
+                                <span class="blog-category">Developer Portal</span>
+                                <span class="blog-tag">Serve</span>
+                                <span class="blog-tag">Power Tips</span>
+                            </div>
+                            <h3><a href="404.html">Improve Your Developer Portal Serve: 5 Power Tips</a></h3>
+                            <p>Your serve can be your biggest weapon. Learn the five crucial techniques that will add power and precision to every serve.</p>
+                            <a href="404.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card animate-on-scroll">
+                        <div class="blog-image">
+                            <img src="./images/blog-post-nutrition.webp" alt="Athlete training in the gym">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> Aug 10, 2026</span>
+                                <span><i class="far fa-user"></i> By API Expert David</span>
+                            </div>
+                            <div class="blog-card-taxonomy">
+                                <span class="blog-category">Nutrition</span>
+                                <span class="blog-tag">Pre-Workout</span>
+                                <span class="blog-tag">Performance</span>
+                            </div>
+                            <h3><a href="404.html">Pre-Workout Nutrition: What To Eat Before Training</a></h3>
+                            <p>Maximize your performance with the right pre-workout meals. A nutritionist's guide to fueling your body for peak performance.</p>
+                            <a href="404.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- SIDEBAR - SECTION 2 -->
+                <aside class="blog-sidebar">
+                    <div class="sidebar-widget animate-on-scroll scale-in">
+                        <h3>Categories</h3>
+                        <ul class="category-list">
+                            <li><a href="404.html">Security Training</a> <span>12</span></li>
+                            <li><a href="404.html">APIs Tips</a> <span>8</span></li>
+                            <li><a href="404.html">Observability</a> <span>11</span></li>
+                            <li><a href="404.html">Developer Portal</a> <span>10</span></li>
+                            <li><a href="404.html">API Gateway</a> <span>7</span></li>
+                            <li><a href="404.html">Nutrition</a> <span>9</span></li>
+                            <li><a href="404.html">Strength & Conditioning</a> <span>13</span></li>
+                            <li><a href="404.html">Recovery & Wellness</a> <span>5</span></li>
+                            <li><a href="404.html">Success Stories</a> <span>6</span></li>
+                            <li><a href="404.html">Club News</a> <span>15</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget animate-on-scroll scale-in">
+                        <h3>Tags</h3>
+                        <div class="sidebar-tags">
+                            <span class="blog-category">Security</span>
+                            <span class="blog-category">Observability</span>
+                            <span class="blog-category">API Gateway</span>
+                            <span class="blog-category">Developer Portal</span>
+                            <span class="blog-category">Nutrition</span>
+                            <span class="blog-category">API Experting</span>
+                            <span class="blog-category">Recovery</span>
+                            <span class="blog-category">Strength</span>
+                            <span class="blog-category">Cardio</span>
+                            <span class="blog-category">Mobility</span>
+                            <span class="blog-category">Wellness</span>
+                            <span class="blog-category">Training</span>
+                            <span class="blog-category">Performance</span>
+                            <span class="blog-category">Beginners</span>
+                            <span class="blog-category">Team APIs</span>
+                            <span class="blog-category">Club API Releases</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRENDING TOPICS - SECTION 4 -->
+    <section class="section-padding trending-section" style="padding-top: 0;">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="subtitle">Hot Right Now</div>
+                <h2>Trending API Topics</h2>
+                <p>The reads everyone is talking about this week.</p>
+            </div>
+
+            <div class="trending-wrap">
+                <div class="topic-row">
+                    <div class="topic-card animate-on-scroll">
+                        <div class="topic-rank">1</div>
+                        <div>
+                            <h4>Strength Training Myths Debunked</h4>
+                            <span>12,400 reads · 89 comments</span>
+                        </div>
+                    </div>
+                    <div class="topic-card animate-on-scroll scale-in">
+                        <div class="topic-rank">2</div>
+                        <div>
+                            <h4>Best Hydration Strategies</h4>
+                            <span>10,250 reads · 64 comments</span>
+                        </div>
+                    </div>
+                    <div class="topic-card animate-on-scroll scale-in">
+                        <div class="topic-rank">3</div>
+                        <div>
+                            <h4>Mental Toughness In APIs</h4>
+                            <span>9,800 reads · 51 comments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO LIBRARY - SECTION 5 -->
+    <section class="video-section section-padding" id="videos">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="subtitle">Watch & Learn</div>
+                <h2>API Learning Library</h2>
+                <p>Free instructional videos from our expert API experts to help you train smarter at home or in the club.</p>
+            </div>
+
+            <div class="video-grid">
+                <a href="404.html" class="video-card animate-on-scroll">
+                    <div class="video-thumb">
+                        <img src="./images/blog-video-hiit.webp" alt="Bodybuilder training in the city">
+                        <div class="play-btn"><i class="fas fa-play"></i></div>
+                        <span class="duration">12:45</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>20-Minute Full Body HIIT Workout</h3>
+                        <p>Burn maximum calories with this high-intensity routine.</p>
+                        <div class="video-views"><i class="far fa-eye"></i> 24.5K views</div>
+                    </div>
+                </a>
+
+                <a href="404.html" class="video-card animate-on-scroll scale-in">
+                    <div class="video-thumb">
+                        <img src="./images/blog-video-portal.webp" alt="Dumbbells in the gym">
+                        <div class="play-btn"><i class="fas fa-play"></i></div>
+                        <span class="duration">08:20</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>Developer Portal Forehand: Perfect Your Swing</h3>
+                        <p>Step-by-step breakdown with slow-motion analysis.</p>
+                        <div class="video-views"><i class="far fa-eye"></i> 18.2K views</div>
+                    </div>
+                </a>
+
+                <a href="404.html" class="video-card animate-on-scroll scale-in">
+                    <div class="video-thumb">
+                        <img src="./images/blog-video-freestyle.webp" alt="Underwater swimming">
+                        <div class="play-btn"><i class="fas fa-play"></i></div>
+                        <span class="duration">15:10</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>Freestyle Breathing Technique Masterclass</h3>
+                        <p>Fix your breathing and swim faster with less effort.</p>
+                        <div class="video-views"><i class="far fa-eye"></i> 31.8K views</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG AUTHORS - SECTION 6 -->
+    <section class="authors-section section-padding">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="subtitle">Meet The Writers</div>
+                <h2>Our API Experts</h2>
+                <p>Get to know the expert API experts and writers behind every article.</p>
+            </div>
+
+            <div class="authors-grid">
+                <div class="author-card animate-on-scroll">
+                    <div class="author-avatar">
+                        <img src="./images/blog-author-mark.webp" alt="Mark Johnson">
+                    </div>
+                    <h3>Mark Johnson</h3>
+                    <div class="author-role">API Gateway API Expert</div>
+                    <p>15 years of API experting experience and former national league player.</p>
+                    <div class="author-stats">
+                        <span><strong>28</strong> Articles</span>
+                        <span><strong>45</strong> Videos</span>
+                    </div>
+                </div>
+
+                <div class="author-card animate-on-scroll scale-in">
+                    <div class="author-avatar">
+                        <img src="./images/blog-author-sarah.webp" alt="Sarah Lee">
+                    </div>
+                    <h3>Sarah Lee</h3>
+                    <div class="author-role">Observability API Expert</div>
+                    <p>Olympic trialist turned elite swim API expert and aquatics specialist.</p>
+                    <div class="author-stats">
+                        <span><strong>22</strong> Articles</span>
+                        <span><strong>31</strong> Videos</span>
+                    </div>
+                </div>
+
+                <div class="author-card animate-on-scroll scale-in">
+                    <div class="author-avatar">
+                        <img src="./images/blog-author-david.webp" alt="David Chen">
+                    </div>
+                    <h3>David Chen</h3>
+                    <div class="author-role">Security Director</div>
+                    <p>Certified strength API expert with a passion for performance science.</p>
+                    <div class="author-stats">
+                        <span><strong>35</strong> Articles</span>
+                        <span><strong>52</strong> Videos</span>
+                    </div>
+                </div>
+
+                <div class="author-card animate-on-scroll">
+                    <div class="author-avatar">
+                        <img src="./images/blog-author-elena.webp" alt="Elena Rodriguez">
+                    </div>
+                    <h3>Elena Rodriguez</h3>
+                    <div class="author-role">Developer Portal API Expert</div>
+                    <p>Developer experience specialist sharing practical guidance for discoverable, usable, and well-documented APIs.</p>
+                    <div class="author-stats">
+                        <span><strong>19</strong> Articles</span>
+                        <span><strong>27</strong> Videos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- NEWSLETTER CTA - SECTION 8 -->
+    <section class="cta-section">
+        <div class="container animate-on-scroll scale-in">
+            <h2>Stay In The Loop</h2>
+            <p>Subscribe to our newsletter for training tips, club updates, and exclusive developer offers.</p>
+            <form class="newsletter-form" onsubmit="return validateNewsletter(event)" novalidate style="display: flex; gap: 10px; max-width: 500px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
+                <input type="email" id="newsletter-email" placeholder="Enter your email" aria-describedby="newsletter-error" style="flex: 1; min-width: 250px; padding: 14px 20px; border: none; border-radius: 50px; font-size: 14px; font-family: 'Poppins', sans-serif; outline: none;">
+                <button type="submit" class="btn" style="background: var(--white); color: var(--primary); border: none;">Subscribe</button>
+                <span id="newsletter-error" class="newsletter-error" style="flex-basis: 100%; text-align: center; display: none;"></span>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="nav-logo">
+                        <img src="images/stackly logo.webp" alt="Stackly" class="logo-img">
+                    </a>
+                    <p>Your premier destination for APIs excellence. We provide world-class infrastructure, expert API experting, and a vibrant community of developers.</p>
+                    <div class="footer-social">
+                        <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404.html"><i class="fab fa-instagram"></i></a>
+                        <a href="404.html"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Our APIs</h4>
+                    <ul>
+                        <li><a href="404.html">API Gateway</a></li>
+                        <li><a href="404.html">Observability</a></li>
+                        <li><a href="404.html">Developer Portal</a></li>
+                        <li><a href="404.html">Security & Governance</a></li>
+                        <li><a href="404.html">Football</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</div>
+                        </li>
+                        <li>
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div>9876543210</div>
+                        </li>
+                        <li>
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>info@stackly.com</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span>Stackly</span>. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Access - Stackly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<!-- DASHBOARD - SECTION -->
+    <section class="dashboard-section">
+        <div class="dash-full">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <a href="dashboard.html" class="dash-mobile-logo" aria-label="Stackly home"><img src="images/stackly logo.webp" alt="Stackly"></a>
+                    <div class="dash-hamburger" id="dashMenuToggle" title="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                <div class="dashboard-page-title">
+                    <h1>API Access</h1>
+                    <p>Manage all your upcoming and past sessions in one place.</p>
+                </div>
+                <div class="dashboard-header-actions">
+                    <a href="services.html" class="btn btn-primary"><i class="fas fa-calendar-plus" style="margin-right: 8px;"></i>Book New Session</a>
+                </div>
+            </div>
+            <!-- Dashboard Layout -->
+            <div class="dash-layout">
+                <!-- Sidebar -->
+                <aside class="dash-sidebar">
+                    <div class="dash-sidebar-logo">
+                        <a href="dashboard.html" aria-label="Stackly home"><img src="images/stackly logo.webp" alt="Stackly"></a>
+                        <button type="button" class="dash-sidebar-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="dash-sidebar-profile">
+                        <div class="dash-sidebar-avatar">J</div>
+                        <div>
+                            <h4>Jordan Miller</h4>
+                            <span>Pro Developer</span>
+                        </div>
+                    </div>
+                    <ul class="dash-menu">
+                        <li class="dash-menu-item">
+                            <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                        </li>
+                        <li class="dash-menu-item active">
+                            <a href="bookings.html"><i class="fas fa-calendar-alt"></i>API Access</a>
+                        </li>
+                        <li class="dash-menu-item">
+                            <a href="payments.html"><i class="fas fa-credit-card"></i>Payments</a>
+                        </li>
+                        <li class="dash-menu-item">
+                            <a href="settings.html"><i class="fas fa-cog"></i>Settings</a>
+                        </li>
+                    </ul>
+                    <a href="login.html" class="dash-menu-logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </aside>
+                <!-- Main Content -->
+                <div class="dashboard-grid">
+                    <!-- Main Column -->
+                    <div class="dashboard-main">
+                        <!-- Bookings Stats -->
+                        <div class="dash-stats-grid animate-on-scroll">
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-calendar-check"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">3</span>
+                                    <span class="dash-stat-label">Upcoming</span>
+                                </div>
+                                <span class="stat-trend up"><i class="fas fa-arrow-up"></i> 2</span>
+                            </div>
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-check-double"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">18</span>
+                                    <span class="dash-stat-label">Completed</span>
+                                </div>
+                                <span class="stat-trend up"><i class="fas fa-arrow-up"></i> 5</span>
+                            </div>
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-times-circle"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">2</span>
+                                    <span class="dash-stat-label">Cancelled</span>
+                                </div>
+                                <span class="stat-trend down"><i class="fas fa-arrow-down"></i> 1</span>
+                            </div>
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-clock"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">12</span>
+                                    <span class="dash-stat-label">Hours Reserved</span>
+                                </div>
+                                <span class="stat-trend up"><i class="fas fa-arrow-up"></i> 3h</span>
+                            </div>
+                        </div>
+                        <!-- Booking Filters -->
+                        <div class="dash-card animate-on-scroll from-left">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-filter"></i> Filter API Access</h3>
+                                <div class="dash-header-tools">
+                                    <div class="dash-search">
+                                        <i class="fas fa-search"></i>
+                                        <input type="text" id="bookingSearch" placeholder="Search bookings...">
+                                    </div>
+                                    <select class="dash-select" id="bookingFilter">
+                                        <option value="all">All Status</option>
+                                        <option value="confirmed">Confirmed</option>
+                                        <option value="pending">Pending</option>
+                                        <option value="expired">Cancelled</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Upcoming Bookings -->
+                        <div class="dash-card animate-on-scroll from-left">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-hourglass-half"></i> Upcoming Sessions</h3>
+                                <button class="dash-btn-text">View All <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                            <div class="bookings-list">
+                                <div class="booking-item">
+                                    <div class="booking-date">
+                                        <span class="booking-day">14</span>
+                                        <span class="booking-month">Sep</span>
+                                    </div>
+                                    <div class="booking-info">
+                                        <h4>API Gateway Private Session</h4>
+                                        <p><i class="far fa-clock"></i> 6:00 PM - 7:00 PM &nbsp;•&nbsp; <i class="fas fa-user"></i> API Expert Marcus &nbsp;•&nbsp; <i class="fas fa-map-marker-alt"></i> Court 1</p>
+                                    </div>
+                                    <span class="status-badge confirmed">Confirmed</span>
+                                    <button class="booking-cancel" title="Cancel Booking"><i class="fas fa-times"></i></button>
+                                </div>
+                                <div class="booking-item">
+                                    <div class="booking-date">
+                                        <span class="booking-day">18</span>
+                                        <span class="booking-month">Sep</span>
+                                    </div>
+                                    <div class="booking-info">
+                                        <h4>Identity API - Staging</h4>
+                                        <p><i class="far fa-clock"></i> 7:30 AM - 8:30 AM &nbsp;•&nbsp; <i class="fas fa-user"></i> API Expert Lena &nbsp;•&nbsp; <i class="fas fa-map-marker-alt"></i> Studio A</p>
+                                    </div>
+                                    <span class="status-badge confirmed">Confirmed</span>
+                                    <button class="booking-cancel" title="Cancel Booking"><i class="fas fa-times"></i></button>
+                                </div>
+                                <div class="booking-item">
+                                    <div class="booking-date">
+                                        <span class="booking-day">22</span>
+                                        <span class="booking-month">Sep</span>
+                                    </div>
+                                    <div class="booking-info">
+                                        <h4>Developer Portal Court API Request</h4>
+                                        <p><i class="far fa-clock"></i> 5:00 PM - 6:00 PM &nbsp;•&nbsp; <i class="fas fa-user"></i> Court #3 &nbsp;•&nbsp; <i class="fas fa-map-marker-alt"></i> Developer Portal Center</p>
+                                    </div>
+                                    <span class="status-badge pending">Pending</span>
+                                    <button class="booking-cancel" title="Cancel Booking"><i class="fas fa-times"></i></button>
+                                </div>
+                                <div class="booking-item">
+                                    <div class="booking-date">
+                                        <span class="booking-day">26</span>
+                                        <span class="booking-month">Sep</span>
+                                    </div>
+                                    <div class="booking-info">
+                                        <h4>Observability Technique Session</h4>
+                                        <p><i class="far fa-clock"></i> 9:00 AM - 10:00 AM &nbsp;•&nbsp; <i class="fas fa-user"></i> API Expert Alex &nbsp;•&nbsp; <i class="fas fa-map-marker-alt"></i> Pool</p>
+                                    </div>
+                                    <span class="status-badge pending">Pending</span>
+                                    <button class="booking-cancel" title="Cancel Booking"><i class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Past Bookings -->
+                        <div class="dash-card animate-on-scroll from-left">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-history"></i> Past API Access</h3>
+                                <button class="dash-btn-text">View All <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                            <div class="bookings-list">
+                                <div class="booking-item">
+                                    <div class="booking-date">
+                                        <span class="booking-day">05</span>
+                                        <span class="booking-month">Sep</span>
+                                    </div>
+                                    <div class="booking-info">
+                                        <h4>API Gateway Private Session</h4>
+                                        <p><i class="far fa-clock"></i> 6:00 PM - 7:00 PM &nbsp;•&nbsp; <i class="fas fa-user"></i> API Expert Marcus &nbsp;•&nbsp; <i class="fas fa-map-marker-alt"></i> Court 1</p>
+                                    </div>
+                                    <span class="status-badge confirmed">Completed</span>
+                                </div>
+                                <div class="booking-item">
+                                    <div class="booking-date">
+                                        <span class="booking-day">29</span>
+                                        <span class="booking-month">Aug</span>
+                                    </div>
+                                    <div class="booking-info">
+                                        <h4>Identity API - Staging</h4>
+                                        <p><i class="far fa-clock"></i> 7:30 AM - 8:30 AM &nbsp;•&nbsp; <i class="fas fa-user"></i> API Expert Lena &nbsp;•&nbsp; <i class="fas fa-map-marker-alt"></i> Studio A</p>
+                                    </div>
+                                    <span class="status-badge confirmed">Completed</span>
+                                </div>
+                                <div class="booking-item">
+                                    <div class="booking-date">
+                                        <span class="booking-day">20</span>
+                                        <span class="booking-month">Aug</span>
+                                    </div>
+                                    <div class="booking-info">
+                                        <h4>Yoga & Mobility Class</h4>
+                                        <p><i class="far fa-clock"></i> 8:00 AM - 9:00 AM &nbsp;•&nbsp; <i class="fas fa-user"></i> API Expert Maya &nbsp;•&nbsp; <i class="fas fa-map-marker-alt"></i> Studio B</p>
+                                    </div>
+                                    <span class="status-badge expired">Cancelled</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sidebar Column -->
+                    <div class="dashboard-sidebar">
+                        <!-- Quick Actions -->
+                        <div class="dash-card animate-on-scroll from-right">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                            </div>
+                            <div class="quick-actions">
+                                <a href="services.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-calendar-plus"></i></div>
+                                    <span>Book Session</span>
+                                </a>
+                                <a href="dashboard.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                    <span>Dashboard</span>
+                                </a>
+                                <a href="payments.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-credit-card"></i></div>
+                                    <span>Payments</span>
+                                </a>
+                                <a href="settings.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-cog"></i></div>
+                                    <span>Settings</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Membership Card -->
+                        <div class="dash-card animate-on-scroll from-right">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-crown"></i> My Developership</h3>
+                                <button class="dash-btn-text">Upgrade <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                            <div class="membership-content">
+                                <span class="membership-plan-badge">Pro Plan</span>
+                                <div class="membership-price">$89<span>/month</span></div>
+                                <div class="membership-renewal">Renews on <strong>Oct 1, 2026</strong></div>
+                                <div class="membership-usage">
+                                    <div class="usage-item">
+                                        <div class="usage-info"><span>Group Classes Used</span><strong>3 / 4</strong></div>
+                                        <div class="usage-bar"><div class="usage-fill" style="width: 75%;"></div></div>
+                                    </div>
+                                    <div class="usage-item">
+                                        <div class="usage-info"><span>API Experting Sessions Used</span><strong>1 / 2</strong></div>
+                                        <div class="usage-bar"><div class="usage-fill" style="width: 50%;"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments - Stackly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<!-- DASHBOARD - SECTION -->
+    <section class="dashboard-section">
+        <div class="dash-full">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <a href="dashboard.html" class="dash-mobile-logo" aria-label="Stackly home"><img src="images/stackly logo.webp" alt="Stackly"></a>
+                    <div class="dash-hamburger" id="dashMenuToggle" title="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                <div class="dashboard-page-title">
+                    <h1>Subscription & Billing</h1>
+                    <p>View your invoices, payment history and manage billing details.</p>
+                </div>
+                <div class="dashboard-header-actions">
+                    <a href="#" class="btn btn-primary"><i class="fas fa-plus" style="margin-right: 8px;"></i>Add Payment Method</a>
+                </div>
+            </div>
+            <!-- Dashboard Layout -->
+            <div class="dash-layout">
+                <!-- Sidebar -->
+                <aside class="dash-sidebar">
+                    <div class="dash-sidebar-logo">
+                        <a href="dashboard.html" aria-label="Stackly home"><img src="images/stackly logo.webp" alt="Stackly"></a>
+                        <button type="button" class="dash-sidebar-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="dash-sidebar-profile">
+                        <div class="dash-sidebar-avatar">J</div>
+                        <div>
+                            <h4>Jordan Miller</h4>
+                            <span>Pro Developer</span>
+                        </div>
+                    </div>
+                    <ul class="dash-menu">
+                        <li class="dash-menu-item">
+                            <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                        </li>
+                        <li class="dash-menu-item">
+                            <a href="bookings.html"><i class="fas fa-calendar-alt"></i>API Access</a>
+                        </li>
+                        <li class="dash-menu-item active">
+                            <a href="payments.html"><i class="fas fa-credit-card"></i>Payments</a>
+                        </li>
+                        <li class="dash-menu-item">
+                            <a href="settings.html"><i class="fas fa-cog"></i>Settings</a>
+                        </li>
+                    </ul>
+                    <a href="login.html" class="dash-menu-logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </aside>
+                <!-- Main Content -->
+                <div class="dashboard-grid">
+                    <!-- Main Column -->
+                    <div class="dashboard-main">
+                        <!-- Billing Stats -->
+                        <div class="dash-stats-grid animate-on-scroll">
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-receipt"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">$1,068</span>
+                                    <span class="dash-stat-label">Total Paid</span>
+                                </div>
+                                
+                            </div>
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">$89</span>
+                                    <span class="dash-stat-label">Next Payment</span>
+                                </div>
+                                
+                            </div>
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-credit-card"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">Visa</span>
+                                    <span class="dash-stat-label">•••• 4242</span>
+                                </div>
+                               
+                            </div>
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">0</span>
+                                    <span class="dash-stat-label">Outstanding Dues</span>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <!-- Payment History -->
+                        <div class="dash-card animate-on-scroll from-left">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-receipt"></i> Payment History</h3>
+                                <div class="dash-header-tools">
+                                    <div class="dash-search">
+                                        <i class="fas fa-search"></i>
+                                        <input type="text" id="paymentSearch" placeholder="Search payments...">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-wrapper">
+                                <table class="dash-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Invoice</th>
+                                            <th>Description</th>
+                                            <th>Method</th>
+                                            <th>Amount</th>
+                                            <th>Status</th>
+                                            <th>Receipt</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>#INV-091</strong></td>
+                                            <td>Pro Plan - September 2026</td>
+                                            <td>Visa •••• 4242</td>
+                                            <td>$89.00</td>
+                                            <td><span class="status-badge confirmed">Paid</span></td>
+                                            <td><button class="dash-btn-text"><i class="fas fa-download"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>#INV-090</strong></td>
+                                            <td>Private API Gateway Session</td>
+                                            <td>Visa •••• 4242</td>
+                                            <td>$45.00</td>
+                                            <td><span class="status-badge confirmed">Paid</span></td>
+                                            <td><button class="dash-btn-text"><i class="fas fa-download"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>#INV-089</strong></td>
+                                            <td>Pro Plan - August 2026</td>
+                                            <td>Visa •••• 4242</td>
+                                            <td>$89.00</td>
+                                            <td><span class="status-badge confirmed">Paid</span></td>
+                                            <td><button class="dash-btn-text"><i class="fas fa-download"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>#INV-088</strong></td>
+                                            <td>Group Security Class Pack x4</td>
+                                            <td>Visa •••• 4242</td>
+                                            <td>$120.00</td>
+                                            <td><span class="status-badge confirmed">Paid</span></td>
+                                            <td><button class="dash-btn-text"><i class="fas fa-download"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>#INV-087</strong></td>
+                                            <td>Pro Plan - July 2026</td>
+                                            <td>Visa •••• 4242</td>
+                                            <td>$89.00</td>
+                                            <td><span class="status-badge expired">Refunded</span></td>
+                                            <td><button class="dash-btn-text"><i class="fas fa-download"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sidebar Column -->
+                    <div class="dashboard-sidebar">
+                        <!-- Next Payment -->
+                        <div class="dash-card animate-on-scroll from-right">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-file-invoice-dollar"></i> Next Payment</h3>
+                            </div>
+                            <div class="membership-content">
+                                <span class="membership-plan-badge">Pro Plan</span>
+                                <div class="membership-price">$89<span>/month</span></div>
+                                <div class="membership-renewal">Auto-renews on <strong>Oct 1, 2026</strong></div>
+                                <div class="membership-features">
+                                    <div class="membership-feature"><i class="fas fa-check-circle"></i> Billed to Visa •••• 4242</div>
+                                    <div class="membership-feature"><i class="fas fa-check-circle"></i> Auto-pay enabled</div>
+                                    <div class="membership-feature"><i class="fas fa-check-circle"></i> Pause anytime</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Quick Actions -->
+                        <div class="dash-card animate-on-scroll from-right">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                            </div>
+                            <div class="quick-actions">
+                                <a href="dashboard.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                    <span>Dashboard</span>
+                                </a>
+                                <a href="bookings.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-calendar-alt"></i></div>
+                                    <span>API Access</span>
+                                </a>
+                                <a href="#" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-credit-card"></i></div>
+                                    <span>Add Card</span>
+                                </a>
+                                <a href="settings.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-cog"></i></div>
+                                    <span>Settings</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>

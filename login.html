@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Stackly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<!-- LOGIN FORM -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-wrapper animate-on-scroll animated">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <img src="images/stackly logo.webp" alt="Stackly" class="auth-logo">
+                        <h1>Welcome Back</h1>
+                        <p>Log in to your Stackly developer account</p>
+                    </div>
+
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="loginEmail">Email Address *</label>
+                            <input type="email" id="loginEmail" placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password *</label>
+                            <div class="password-wrapper">
+                                <input type="password" id="loginPassword" placeholder="Enter your password">
+                                <button type="button" class="password-toggle" data-target="loginPassword" aria-label="Show or hide password"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label for="signupRole">Select a Role *</label>
+                            <select id="signupRole">
+                                <option value="" selected disabled>Choose a Role</option>
+                                <option value="user">User</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="display: flex; justify-content: space-between; align-items: center; margin-top: 4px;">
+                            <label style="display: flex; align-items: center; gap: 8px; margin: 0; font-size: 13px; font-weight: 400; cursor: pointer;">
+                                <input type="checkbox" style="width: auto;"> Redeveloper me
+                            </label>
+                            <a href="404.html" style="color: var(--primary); font-size: 13px; font-weight: 600;">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Log In</button>
+                    </form>
+
+                    <div class="auth-switch">
+                        Don't have an account? <a href="signup.html">Signup</a>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="index.html" class="btn btn-outline"><i class="fas fa-home" style="margin-right: 8px;"></i>Back To Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

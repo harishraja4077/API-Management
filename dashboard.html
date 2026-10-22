@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - Stackly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<!-- DASHBOARD - SECTION -->
+    <section class="dashboard-section">
+        <div class="dash-full">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <a href="dashboard.html" class="dash-mobile-logo" aria-label="Stackly home"><img src="images/stackly logo.webp" alt="Stackly"></a>
+                    <div class="dash-hamburger" id="dashMenuToggle" title="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                <div class="dashboard-welcome">
+                    <h1>Welcome back, Jordan!</h1>
+                    <p>Here's what's happening with your Stackly API Cloud developership today.</p>
+                </div>
+                <div class="dashboard-header-actions">
+                    <a href="404.html" class="btn btn-primary"><i class="fas fa-calendar-plus" style="margin-right: 8px;"></i>Book A Session</a>
+                </div>
+            </div>
+            <!-- Dashboard Layout -->
+            <div class="dash-layout">
+                <!-- Sidebar -->
+                <aside class="dash-sidebar">
+                    <div class="dash-sidebar-logo">
+                        <a href="dashboard.html" aria-label="Stackly home"><img src="images/stackly logo.webp" alt="Stackly"></a>
+                        <button type="button" class="dash-sidebar-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="dash-sidebar-profile">
+                        <div class="dash-sidebar-avatar">J</div>
+                        <div class="dash-sidebar-profile-info">
+                            <h4>Jordan Miller</h4>
+                            <span>Pro Developer</span>
+                        </div>
+                    </div>
+                    <ul class="dash-menu">
+                        <li class="dash-menu-item active">
+                            <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                        </li>
+                        <li class="dash-menu-item">
+                            <a href="bookings.html"><i class="fas fa-calendar-alt"></i>API Access</a>
+                        </li>
+                        <li class="dash-menu-item">
+                            <a href="payments.html"><i class="fas fa-credit-card"></i>Payments</a>
+                        </li>
+                        <li class="dash-menu-item">
+                            <a href="settings.html"><i class="fas fa-cog"></i>Settings</a>
+                        </li>
+                    </ul>
+                    <a href="login.html" class="dash-menu-logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </aside>
+                <!-- Main Content -->
+                <div class="dashboard-grid">
+                    <!-- Main Column -->
+                    <div class="dashboard-main">
+                        <!-- Stats Grid -->
+                        <div class="dash-stats-grid animate-on-scroll">
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-shield-alt"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">24</span>
+                                    <span class="dash-stat-label">Sessions This Month</span>
+                                </div>
+                                <span class="stat-trend up"><i class="fas fa-arrow-up"></i> 12%</span>
+                            </div>
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-calendar-check"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">3</span>
+                                    <span class="dash-stat-label">Upcoming API Access</span>
+                                </div>
+                                <span class="stat-trend up"><i class="fas fa-arrow-up"></i> 2</span>
+                            </div>
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-medal"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">18</span>
+                                    <span class="dash-stat-label">Achievements Earned</span>
+                                </div>
+                                <span class="stat-trend up"><i class="fas fa-arrow-up"></i> 5%</span>
+                            </div>
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-shoe-prints"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">86</span>
+                                    <span class="dash-stat-label">Days On Platform</span>
+                                </div>
+                                <span class="stat-trend down"><i class="fas fa-arrow-down"></i> -3</span>
+                            </div>
+                        </div>
+                        <!-- Profile Card -->
+                        <div class="dash-card animate-on-scroll from-left">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-user"></i> My Profile</h3>
+                                <a href="404.html" class="dash-btn-text">Edit Profile <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="profile-content">
+                                <div class="profile-avatar">
+                                    <div class="profile-avatar-letter">J</div>
+                                    <span class="profile-status online">Online</span>
+                                </div>
+                                <div class="profile-details">
+                                    <h4>Jordan Miller</h4>
+                                    <span class="profile-role">Pro Developer</span>
+                                    <div class="profile-info-list">
+                                        <div class="profile-info-item"><i class="fas fa-envelope"></i> jordan.miller@email.com</div>
+                                        <div class="profile-info-item"><i class="fas fa-phone"></i> +1 (555) 987-6543</div>
+                                        <div class="profile-info-item"><i class="fas fa-map-marker-alt"></i> Brooklyn, NY</div>
+                                        <div class="profile-info-item"><i class="fas fa-calendar"></i> Developer since Jan 2026</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Upcoming Bookings -->
+                        <div class="dash-card animate-on-scroll from-left">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-calendar-alt"></i> Upcoming API Access</h3>
+                                <a href="404.html" class="dash-btn-text">View Schedule <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="bookings-list">
+                                <div class="booking-item">
+                                    <div class="booking-date">
+                                        <span class="booking-day">14</span>
+                                        <span class="booking-month">Sep</span>
+                                    </div>
+                                    <div class="booking-info">
+                                        <h4>API Gateway Private Session</h4>
+                                        <p><i class="far fa-clock"></i> 6:00 PM - 7:00 PM &nbsp;•&nbsp; <i class="fas fa-user"></i> API Expert Marcus</p>
+                                    </div>
+                                    <span class="status-badge confirmed">Confirmed</span>
+                                    <a href="404.html" class="booking-cancel" title="Cancel Booking"><i class="fas fa-times"></i></a>
+                                </div>
+                                <div class="booking-item">
+                                    <div class="booking-date">
+                                        <span class="booking-day">18</span>
+                                        <span class="booking-month">Sep</span>
+                                    </div>
+                                    <div class="booking-info">
+                                        <h4>Identity API - Staging</h4>
+                                        <p><i class="far fa-clock"></i> 7:30 AM - 8:30 AM &nbsp;•&nbsp; <i class="fas fa-user"></i> API Expert Lena</p>
+                                    </div>
+                                    <span class="status-badge confirmed">Confirmed</span>
+                                    <a href="404.html" class="booking-cancel" title="Cancel Booking"><i class="fas fa-times"></i></a>
+                                </div>
+                                <div class="booking-item">
+                                    <div class="booking-date">
+                                        <span class="booking-day">22</span>
+                                        <span class="booking-month">Sep</span>
+                                    </div>
+                                    <div class="booking-info">
+                                        <h4>Orders API - Sandbox</h4>
+                                        <p><i class="far fa-clock"></i> 5:00 PM - 6:00 PM &nbsp;•&nbsp; <i class="fas fa-user"></i> Court #3</p>
+                                    </div>
+                                    <span class="status-badge pending">Pending</span>
+                                    <a href="404.html" class="booking-cancel" title="Cancel Booking"><i class="fas fa-times"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Recent Activity -->
+                        <div class="dash-card animate-on-scroll from-left">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-chart-line"></i> Recent Activity</h3>
+                                <a href="404.html" class="dash-btn-text">View All <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon completed"><i class="fas fa-check"></i></div>
+                                    <div class="activity-info">
+                                        <p>Completed <strong>API Gateway Private Session</strong></p>
+                                        <span>Today, 7:00 PM</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon payment"><i class="fas fa-credit-card"></i></div>
+                                    <div class="activity-info">
+                                        <p>Developership payment of <strong>$89.00</strong> received</p>
+                                        <span>Sep 1, 2026</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon booked"><i class="fas fa-calendar-plus"></i></div>
+                                    <div class="activity-info">
+                                        <p>Booked <strong>Identity API - Staging</strong> for Sep 18</p>
+                                        <span>Aug 30, 2026</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon achievement"><i class="fas fa-rocket"></i></div>
+                                    <div class="activity-info">
+                                        <p>Earned <strong>"10 Session Streak"</strong> achievement</p>
+                                        <span>Aug 28, 2026</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sidebar Column -->
+                    <div class="dashboard-sidebar">
+                        <!-- Membership Card -->
+                        <div class="dash-card animate-on-scroll from-right">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-crown"></i> My Developership</h3>
+                                <a href="404.html" class="dash-btn-text">Upgrade <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="membership-content">
+                                <span class="membership-plan-badge">Pro Plan</span>
+                                <div class="membership-price">$89<span>/month</span></div>
+                                <div class="membership-renewal">Renews on <strong>Oct 1, 2026</strong></div>
+                                <div class="membership-features">
+                                    <div class="membership-feature"><i class="fas fa-check-circle"></i> 10M API calls / month</div>
+                                    <div class="membership-feature"><i class="fas fa-check-circle"></i> Unlimited API products</div>
+                                    <div class="membership-feature"><i class="fas fa-check-circle"></i> 2 private API experting sessions</div>
+                                    <div class="membership-feature"><i class="fas fa-check-circle"></i> Advanced analytics retention</div>
+                                </div>
+                                <div class="membership-usage">
+                                    <div class="usage-item">
+                                        <div class="usage-info"><span>Group Classes Used</span><strong>3 / 4</strong></div>
+                                        <div class="usage-bar"><div class="usage-fill" style="width: 75%;"></div></div>
+                                    </div>
+                                    <div class="usage-item">
+                                        <div class="usage-info"><span>API Experting Sessions Used</span><strong>1 / 2</strong></div>
+                                        <div class="usage-bar"><div class="usage-fill" style="width: 50%;"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Quick Actions -->
+                        <div class="dash-card animate-on-scroll from-right">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                            </div>
+                            <div class="quick-actions">
+                                <a href="404.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-calendar-plus"></i></div>
+                                    <span>Book Session</span>
+                                </a>
+                                <a href="404.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-clock"></i></div>
+                                    <span>View Schedule</span>
+                                </a>
+                                <a href="404.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-credit-card"></i></div>
+                                    <span>Make Payment</span>
+                                </a>
+                                <a href="404.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-headset"></i></div>
+                                    <span>Get Support</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- My Coaches -->
+                        <div class="dash-card animate-on-scroll from-right">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-users"></i> My API Experts</h3>
+                                <a href="404.html" class="dash-btn-text">All <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="coaches-list">
+                                <a href="404.html" class="coach-item">
+                                    <div class="coach-avatar">M</div>
+                                    <div class="coach-info">
+                                        <h4>Marcus Johnson</h4>
+                                        <span>API Gateway & Strength</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <a href="404.html" class="coach-item">
+                                    <div class="coach-avatar">L</div>
+                                    <div class="coach-info">
+                                        <h4>Lena Rodriguez</h4>
+                                        <span>Group Security & Yoga</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <a href="404.html" class="coach-item">
+                                    <div class="coach-avatar">A</div>
+                                    <div class="coach-info">
+                                        <h4>Alex Chen</h4>
+                                        <span>Developer Portal & Observability</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Stackly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/stackly logo.webp" alt="Stackly" class="logo-img">
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html" class="mobile-menu-logo"><img src="images/stackly logo.webp" alt="Stackly"></a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html" class="active">Contact</a>
+                <div class="nav-cta">
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    <a href="login.html" class="btn-login">Login</a>
+                </div>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO - SECTION 1 -->
+    <section class="page-hero">
+        <div class="page-hero-bg">
+            <img src="./images/contact-page-hero.webp" alt="Gym equipment in a bright space">
+        </div>
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                <a href="#" class="active">Contact</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT INFO + FORM - SECTION 2 -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="subtitle">Get In Touch</div>
+                <h2>Let's Talk About Your API Strategy</h2>
+                <p>Have a question about developership, our capabilities, or anything else? Reach out - our team is here to help.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info-cards">
+                    <div class="contact-info-card animate-on-scroll from-left">
+                        <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Global Support</h4>
+                            <p>MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card animate-on-scroll from-left">
+                        <div class="card-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h4>Phone Number</h4>
+                            <p>9876543210<br>9876543211</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card animate-on-scroll from-left">
+                        <div class="card-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>info@stackly.com<br>support@stackly.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card animate-on-scroll from-left">
+                        <div class="card-icon"><i class="far fa-clock"></i></div>
+                        <div>
+                            <h4>Opening Hours</h4>
+                            <p>Mon - Sat: 6:00 AM - 11:00 PM<br>Sunday: 8:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper animate-on-scroll from-right">
+                    <h3>Send Us A Message</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" placeholder="John Smith">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" placeholder="john@example.com">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject">
+                                    <option>Developership Inquiry</option>
+                                    <option>Training Capabilities</option>
+                                    <option>API Release API Request</option>
+                                    <option>General Question</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" placeholder="Tell us how we can help you..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message <i class="fas fa-paper-plane" style="margin-left: 8px;"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP - SECTION 3 -->
+    <section class="map-section section-padding" style="padding-top: 0;">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="subtitle">Find Us</div>
+                <h2>Global Support</h2>
+            </div>
+            <div class="map-container animate-on-scroll scale-in">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.1616097152896!2d78.1739798!3d11.682956599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babefef7fd970bb%3A0xe11aef1a71994f9!2sStackly!5e0!3m2!1sen!2sin!4v1788930175823!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ - SECTION 4 -->
+    <section class="section-padding" style="background: var(--light);">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="subtitle">FAQ</div>
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to the questions we hear most from our developers and visitors.</p>
+            </div>
+
+            <div class="mv-grid" style="grid-template-columns: 1fr;">
+                <div class="mv-card animate-on-scroll">
+                    <h3>How do I become a developer?</h3>
+                    <p>Simply visit our service or contact us through the form above. We'll walk you through our developership plans and help you find the perfect fit. You can also book a free trial session to try before you join.</p>
+                </div>
+                <div class="mv-card animate-on-scroll scale-in">
+                    <h3>What APIs do you offer?</h3>
+                    <p>We support REST, GraphQL, SOAP, and event-driven integration patterns with gateway, security, analytics, developer portal, and lifecycle governance capabilities.</p>
+                </div>
+                <div class="mv-card animate-on-scroll scale-in">
+                    <h3>Are there capabilities for kids?</h3>
+                    <p>Yes. Teams can create sandbox environments, publish interactive documentation, issue subscriptions and credentials, and onboard internal or partner developers through self-service workflows.</p>
+                </div>
+                <div class="mv-card animate-on-scroll">
+                    <h3>Can I cancel my developership anytime?</h3>
+                    <p>Yes, we offer flexible month-to-month plans with no long-term contracts. You can pause or cancel your developership anytime by giving us 30 days notice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA - SECTION 5 -->
+    <section class="cta-section">
+        <div class="container animate-on-scroll scale-in">
+            <h2>Start Building Today</h2>
+            <p>Book a free tour of our infrastructure and see everything Stackly has to offer.</p>
+            <a href="404.html" class="btn">Get Directions</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="nav-logo">
+                        <img src="images/stackly logo.webp" alt="Stackly" class="logo-img">
+                    </a>
+                    <p>Your premier destination for APIs excellence. We provide world-class infrastructure, expert API experting, and a vibrant community of developers.</p>
+                    <div class="footer-social">
+                        <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404.html"><i class="fab fa-instagram"></i></a>
+                        <a href="404.html"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Our APIs</h4>
+                    <ul>
+                        <li><a href="404.html">API Gateway</a></li>
+                        <li><a href="404.html">Observability</a></li>
+                        <li><a href="404.html">Developer Portal</a></li>
+                        <li><a href="404.html">Security & Governance</a></li>
+                        <li><a href="404.html">Football</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</div>
+                        </li>
+                        <li>
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div>9876543210</div>
+                        </li>
+                        <li>
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>info@stackly.com</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span>Stackly</span>. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

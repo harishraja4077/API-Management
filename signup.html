@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Stackly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<!-- SIGNUP FORM -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-wrapper animate-on-scroll animated">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <img src="images/stackly logo.webp" alt="Stackly" class="auth-logo">
+                        <h1>Create Your Account</h1>
+                        <p>Join Stackly and start your journey today</p>
+                    </div>
+
+                    <form id="signupForm">
+                       
+                        <div class="form-group">
+                            <label for="signupName">Full Name *</label>
+                            <input type="text" id="signupName" placeholder="John Smith">
+                        </div>
+                        <div class="form-group">
+                            <label for="signupEmail">Email Address *</label>
+                            <input type="email" id="signupEmail" placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPlan">Choose A Plan</label>
+                            <select id="signupPlan">
+                                <option>Basic - $29/month</option>
+                                <option>Pro - $59/month</option>
+                                <option>Elite - $99/month</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPassword">Password *</label>
+                            <div class="password-wrapper">
+                                <input type="password" id="signupPassword" placeholder="Create a password">
+                                <button type="button" class="password-toggle" data-target="signupPassword" aria-label="Show or hide password"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupConfirm">Confirm Password *</label>
+                            <div class="password-wrapper">
+                                <input type="password" id="signupConfirm" placeholder="Repeat your password">
+                                <button type="button" class="password-toggle" data-target="signupConfirm" aria-label="Show or hide password"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label for="signupRole">Select a Role *</label>
+                            <select id="signupRole">
+                                <option value="" selected disabled>Choose a Role</option>
+                                <option value="user">User</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <div class="terms-check">
+                                <input type="checkbox" id="signupTerms">
+                                <label for="signupTerms">I agree to the <a href="404.html">Terms &amp; Conditions</a> and <a href="404.html">Privacy Policy</a> *</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create Account</button>
+                    </form>
+
+                    <div class="auth-switch">
+                        Already have an account? <a href="login.html">Log in</a>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="index.html" class="btn btn-outline"><i class="fas fa-home" style="margin-right: 8px;"></i>Back To Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

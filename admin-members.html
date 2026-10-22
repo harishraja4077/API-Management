@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developers - Stackly Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<!-- DASHBOARD - SECTION -->
+    <section class="dashboard-section">
+        <div class="dash-full">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <a href="admin.html" class="dash-mobile-logo" aria-label="Stackly home"><img src="images/stackly logo.webp" alt="Stackly"></a>
+                    <div class="dash-hamburger" id="dashMenuToggle" title="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                <div class="dashboard-page-title">
+                    <h1>Developers</h1>
+                    <p>Manage all club developers, plans and account statuses.</p>
+                </div>
+                <div class="dashboard-header-actions">
+                    <a href="#" class="btn btn-primary"><i class="fas fa-user-plus" style="margin-right: 8px;"></i>Add Developer</a>
+                </div>
+            </div>
+            <!-- Dashboard Layout -->
+            <div class="dash-layout">
+                <!-- Sidebar -->
+                <aside class="dash-sidebar">
+                    <div class="dash-sidebar-logo">
+                        <a href="admin.html" aria-label="Stackly home"><img src="images/stackly logo.webp" alt="Stackly"></a>
+                        <button type="button" class="dash-sidebar-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="dash-sidebar-profile">
+                        <div class="dash-sidebar-avatar">D</div>
+                        <div>
+                            <h4>Daniel Reed</h4>
+                            <span>Administrator</span>
+                        </div>
+                    </div>
+                    <ul class="dash-menu">
+                        <li class="dash-menu-item">
+                            <a href="admin.html"><i class="fas fa-tachometer-alt"></i>Admin</a>
+                        </li>
+                        <li class="dash-menu-item active">
+                            <a href="admin-members.html"><i class="fas fa-users"></i>Developers</a>
+                        </li>
+                        <li class="dash-menu-item">
+                            <a href="admin-bookings.html"><i class="fas fa-calendar-alt"></i>API Access</a>
+                        </li>
+                        <li class="dash-menu-item">
+                            <a href="admin-events.html"><i class="fas fa-calendar-check"></i>API Releases</a>
+                        </li>
+                        <li class="dash-menu-item">
+                            <a href="admin-settings.html"><i class="fas fa-cog"></i>Settings</a>
+                        </li>
+                    </ul>
+                    <a href="login.html" class="dash-menu-logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </aside>
+                <!-- Main Content -->
+                <div class="dashboard-grid">
+                    <!-- Main Column -->
+                    <div class="dashboard-main">
+                        <!-- Member Stats -->
+                        <div class="dash-stats-grid animate-on-scroll">
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-users"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">1,248</span>
+                                    <span class="dash-stat-label">Total Developers</span>
+                                </div>
+                               
+                            </div>
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-user-check"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">1,102</span>
+                                    <span class="dash-stat-label">Managed APIs</span>
+                                </div>
+                                
+                            </div>
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-user-clock"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">73</span>
+                                    <span class="dash-stat-label">Pending Accounts</span>
+                                </div>
+                                
+                            </div>
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-user-plus"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">96</span>
+                                    <span class="dash-stat-label">New This Month</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <!-- Members Table -->
+                        <div class="dash-card animate-on-scroll from-left">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-user-friends"></i> All Developers</h3>
+                                <div class="dash-header-tools">
+                                    <div class="dash-search">
+                                        <i class="fas fa-search"></i>
+                                        <input type="text" id="memberSearch" placeholder="Search members...">
+                                    </div>
+                                    <select class="dash-select" id="memberPlanFilter">
+                                        <option value="all">All Plans</option>
+                                        <option value="basic">Basic</option>
+                                        <option value="pro">Pro</option>
+                                        <option value="elite">Elite</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="table-wrapper">
+                                <table class="dash-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Developer</th>
+                                            <th>Plan</th>
+                                            <th>Joined</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="table-user">
+                                                    <span class="table-avatar">J</span>
+                                                    <div>
+                                                        <strong>Jordan Miller</strong>
+                                                        <span>jordan.miller@email.com</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><span class="plan-badge pro">Pro</span></td>
+                                            <td>Jan 12, 2026</td>
+                                            <td><span class="status-badge confirmed">Active</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button title="Edit"><i class="fas fa-edit"></i></button>
+                                                    <button title="Delete"><i class="fas fa-trash"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="table-user">
+                                                    <span class="table-avatar">A</span>
+                                                    <div>
+                                                        <strong>Alex Chen</strong>
+                                                        <span>alex.chen@email.com</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><span class="plan-badge elite">Elite</span></td>
+                                            <td>Feb 03, 2026</td>
+                                            <td><span class="status-badge confirmed">Active</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button title="Edit"><i class="fas fa-edit"></i></button>
+                                                    <button title="Delete"><i class="fas fa-trash"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="table-user">
+                                                    <span class="table-avatar">S</span>
+                                                    <div>
+                                                        <strong>Samantha Lee</strong>
+                                                        <span>sam.lee@email.com</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><span class="plan-badge basic">Basic</span></td>
+                                            <td>Mar 20, 2026</td>
+                                            <td><span class="status-badge pending">Pending</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button title="Edit"><i class="fas fa-edit"></i></button>
+                                                    <button title="Delete"><i class="fas fa-trash"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="table-user">
+                                                    <span class="table-avatar">M</span>
+                                                    <div>
+                                                        <strong>Marcus Johnson</strong>
+                                                        <span>marcus.j@email.com</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><span class="plan-badge pro">Pro</span></td>
+                                            <td>Apr 15, 2026</td>
+                                            <td><span class="status-badge confirmed">Active</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button title="Edit"><i class="fas fa-edit"></i></button>
+                                                    <button title="Delete"><i class="fas fa-trash"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="table-user">
+                                                    <span class="table-avatar">E</span>
+                                                    <div>
+                                                        <strong>Emily Davis</strong>
+                                                        <span>emily.davis@email.com</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><span class="plan-badge elite">Elite</span></td>
+                                            <td>May 08, 2026</td>
+                                            <td><span class="status-badge confirmed">Active</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button title="Edit"><i class="fas fa-edit"></i></button>
+                                                    <button title="Delete"><i class="fas fa-trash"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+<div class="table-user">
+                                                    <span class="table-avatar">O</span>
+                                                    <div>
+                                                        <strong>Olivia Brown</strong>
+                                                        <span>olivia.brown@email.com</span>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td><span class="plan-badge basic">Basic</span></td>
+                                            <td>Jun 30, 2026</td>
+                                            <td><span class="status-badge expired">Inactive</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button title="Edit"><i class="fas fa-edit"></i></button>
+                                                    <button title="Delete"><i class="fas fa-trash"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sidebar Column -->
+                    <div class="dashboard-sidebar">
+                        <!-- Plan Distribution -->
+                        <div class="dash-card animate-on-scroll from-right">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-chart-pie"></i> Plan Distribution</h3>
+                            </div>
+                            <div class="plan-distribution">
+                                <div class="plan-dist-item">
+                                    <span class="plan-dist-label"><span class="plan-dot basic"></span>Basic</span>
+                                    <div class="plan-dist-bar"><div class="plan-dist-fill basic" style="width: 35%;"></div></div>
+                                    <span class="plan-dist-value">437</span>
+                                </div>
+                                <div class="plan-dist-item">
+                                    <span class="plan-dist-label"><span class="plan-dot pro"></span>Pro</span>
+                                    <div class="plan-dist-bar"><div class="plan-dist-fill pro" style="width: 45%;"></div></div>
+                                    <span class="plan-dist-value">562</span>
+                                </div>
+                                <div class="plan-dist-item">
+                                    <span class="plan-dist-label"><span class="plan-dot elite"></span>Elite</span>
+                                    <div class="plan-dist-bar"><div class="plan-dist-fill elite" style="width: 20%;"></div></div>
+                                    <span class="plan-dist-value">249</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Quick Actions -->
+                        <div class="dash-card animate-on-scroll from-right">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                            </div>
+                            <div class="quick-actions">
+                                <a href="#" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-user-plus"></i></div>
+                                    <span>Add Developer</span>
+                                </a>
+                                <a href="admin.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                    <span>Dashboard</span>
+                                </a>
+                                <a href="admin-bookings.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-calendar-alt"></i></div>
+                                    <span>API Access</span>
+                                </a>
+                                <a href="admin-events.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-calendar-check"></i></div>
+                                    <span>API Releases</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>

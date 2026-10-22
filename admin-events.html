@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Releases - Stackly Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<!-- DASHBOARD - SECTION -->
+    <section class="dashboard-section">
+        <div class="dash-full">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <a href="admin.html" class="dash-mobile-logo" aria-label="Stackly home"><img src="images/stackly logo.webp" alt="Stackly"></a>
+                    <div class="dash-hamburger" id="dashMenuToggle" title="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                <div class="dashboard-page-title">
+                    <h1>API Releases</h1>
+                    <p>Create and manage club API launchs, clinics and activities.</p>
+                </div>
+                <div class="dashboard-header-actions">
+                    <a href="#" class="btn btn-primary"><i class="fas fa-calendar-plus" style="margin-right: 8px;"></i>Create API Release</a>
+                </div>
+            </div>
+            <!-- Dashboard Layout -->
+            <div class="dash-layout">
+                <!-- Sidebar -->
+                <aside class="dash-sidebar">
+                    <div class="dash-sidebar-logo">
+                        <a href="admin.html" aria-label="Stackly home"><img src="images/stackly logo.webp" alt="Stackly"></a>
+                        <button type="button" class="dash-sidebar-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="dash-sidebar-profile">
+                        <div class="dash-sidebar-avatar">D</div>
+                        <div>
+                            <h4>Daniel Reed</h4>
+                            <span>Administrator</span>
+                        </div>
+                    </div>
+                    <ul class="dash-menu">
+                        <li class="dash-menu-item">
+                            <a href="admin.html"><i class="fas fa-tachometer-alt"></i>Admin</a>
+                        </li>
+                        <li class="dash-menu-item">
+                            <a href="admin-members.html"><i class="fas fa-users"></i>Developers</a>
+                        </li>
+                        <li class="dash-menu-item">
+                            <a href="admin-bookings.html"><i class="fas fa-calendar-alt"></i>API Access</a>
+                        </li>
+                        <li class="dash-menu-item active">
+                            <a href="admin-events.html"><i class="fas fa-calendar-check"></i>API Releases</a>
+                        </li>
+                        <li class="dash-menu-item">
+                            <a href="admin-settings.html"><i class="fas fa-cog"></i>Settings</a>
+                        </li>
+                    </ul>
+                    <a href="login.html" class="dash-menu-logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </aside>
+                <!-- Main Content -->
+                <div class="dashboard-grid">
+                    <!-- Main Column -->
+                    <div class="dashboard-main">
+                        <!-- Event Stats -->
+                        <div class="dash-stats-grid animate-on-scroll">
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-calendar-day"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">12</span>
+                                    <span class="dash-stat-label">Platform Highlights</span>
+                                </div>
+                                <span class="stat-trend up"><i class="fas fa-arrow-up"></i> 3</span>
+                            </div>
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-users"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">320</span>
+                                    <span class="dash-stat-label">Registered Participants</span>
+                                </div>
+                                <span class="stat-trend up"><i class="fas fa-arrow-up"></i> 9%</span>
+                            </div>
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-check-double"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">28</span>
+                                    <span class="dash-stat-label">Completed API Releases</span>
+                                </div>
+                                <span class="stat-trend up"><i class="fas fa-arrow-up"></i> 4</span>
+                            </div>
+                            <div class="dash-stat-card">
+                                <div class="dash-stat-icon"><i class="fas fa-file-pen"></i></div>
+                                <div class="dash-stat-info">
+                                    <span class="dash-stat-number">4</span>
+                                    <span class="dash-stat-label">Drafts</span>
+                                </div>
+                                <span class="stat-trend down"><i class="fas fa-arrow-down"></i> 1</span>
+                            </div>
+                        </div>
+                        <!-- Events List -->
+                        <div class="dash-card animate-on-scroll from-left">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-calendar-alt"></i> All API Releases</h3>
+                                <div class="dash-header-tools">
+                                    <div class="dash-search">
+                                        <i class="fas fa-search"></i>
+                                        <input type="text" id="adminEventSearch" placeholder="Search events...">
+                                    </div>
+                                    <select class="dash-select" id="adminEventFilter">
+                                        <option value="all">All Status</option>
+                                        <option value="confirmed">Published</option>
+                                        <option value="pending">Draft</option>
+                                        <option value="expired">Completed</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="admin-events-list">
+                                <div class="admin-event-item">
+                                    <div class="admin-event-date">
+                                        <span class="event-day">14</span>
+                                        <span class="event-month">Sep</span>
+                                    </div>
+                                    <div class="admin-event-info">
+                                        <h4>Payments API v2 Launch</h4>
+                                        <p><i class="fas fa-clock"></i> 10:00 AM &nbsp;•&nbsp; 8 teams &nbsp;•&nbsp; Court 1</p>
+                                    </div>
+                                    <span class="status-badge confirmed">Published</span>
+                                </div>
+                                <div class="admin-event-item">
+                                    <div class="admin-event-date">
+                                        <span class="event-day">18</span>
+                                        <span class="event-month">Sep</span>
+                                    </div>
+                                    <div class="admin-event-info">
+                                        <h4>Observability Upgrade</h4>
+                                        <p><i class="fas fa-clock"></i> 9:00 AM &nbsp;•&nbsp; 45 participants &nbsp;•&nbsp; Pool</p>
+                                    </div>
+                                    <span class="status-badge confirmed">Published</span>
+                                </div>
+                                <div class="admin-event-item">
+                                    <div class="admin-event-date">
+                                        <span class="event-day">26</span>
+                                        <span class="event-month">Sep</span>
+                                    </div>
+                                    <div class="admin-event-info">
+                                        <h4>Developer Portal Release</h4>
+                                        <p><i class="fas fa-clock"></i> 4:00 PM &nbsp;•&nbsp; API Expert Alex &nbsp;•&nbsp; Developer Portal Center</p>
+                                    </div>
+                                    <span class="status-badge pending">Draft</span>
+                                </div>
+                                <div class="admin-event-item">
+                                    <div class="admin-event-date">
+                                        <span class="event-day">30</span>
+                                        <span class="event-month">Sep</span>
+                                    </div>
+                                    <div class="admin-event-info">
+                                        <h4>Zero-Trust Policy Rollout</h4>
+                                        <p><i class="fas fa-clock"></i> 7:00 AM &nbsp;•&nbsp; Open to all &nbsp;•&nbsp; Main Arena</p>
+                                    </div>
+                                    <span class="status-badge confirmed">Published</span>
+                                </div>
+                                <div class="admin-event-item">
+                                    <div class="admin-event-date">
+                                        <span class="event-day">02</span>
+                                        <span class="event-month">Sep</span>
+                                    </div>
+                                    <div class="admin-event-info">
+                                        <h4>Partner API Onboarding</h4>
+                                        <p><i class="fas fa-clock"></i> 8:00 AM &nbsp;•&nbsp; 60 kids &nbsp;•&nbsp; All infrastructure</p>
+                                    </div>
+                                    <span class="status-badge expired">Completed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sidebar Column -->
+                    <div class="dashboard-sidebar">
+                        <!-- Upcoming Highlights -->
+                        <div class="dash-card animate-on-scroll from-right">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-star"></i> Featured API Release</h3>
+                            </div>
+                            <div class="membership-content">
+                                <span class="membership-plan-badge">Sep 14</span>
+                                <div class="membership-price" style="font-size: 26px;">API Gateway<br>API Launch</div>
+                                <div class="membership-renewal">8 teams • Court 1 • 10:00 AM</div>
+                                <a href="#" class="btn btn-primary" style="width: 100%; justify-content: center;">Manage API Release</a>
+                            </div>
+                        </div>
+                        <!-- Quick Actions -->
+                        <div class="dash-card animate-on-scroll from-right">
+                            <div class="dash-card-header">
+                                <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                            </div>
+                            <div class="quick-actions">
+                                <a href="admin.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                    <span>Dashboard</span>
+                                </a>
+                                <a href="admin-members.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-users"></i></div>
+                                    <span>Developers</span>
+                                </a>
+                                <a href="admin-bookings.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-calendar-alt"></i></div>
+                                    <span>API Access</span>
+                                </a>
+                                <a href="admin-settings.html" class="quick-action-item">
+                                    <div class="quick-action-icon"><i class="fas fa-cog"></i></div>
+                                    <span>Settings</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>
