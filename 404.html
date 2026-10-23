@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<body class="preloader-active">
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+<img alt="Stackly" class="preloader-logo" src="images/stackly logo.webp"/>
+<div class="preloader-spinner"></div>
+<div class="preloader-text">Loading</div>
+</div>
 <!-- ERROR / 404 - SECTION -->
     <section class="error-section">
         <div class="error-bg-shape one"></div>
@@ -17,7 +23,7 @@
 
         <div class="error-wrapper animate-on-scroll scale-in">
             <div class="error-card">
-                <img src="images/stackly logo.webp" alt="Stackly" class="error-logo">
+                <a href="index.html"><img src="images/stackly logo2.webp" alt="Stackly" class="error-logo"></a>
                 <span class="error-code">404</span>
                 <h1 class="error-title">Oops! Page Not Found</h1>
                 <p class="error-text">The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>

@@ -1,5 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    // ============ PRELOADER ============
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        document.body.classList.add('preloader-active');
+        setTimeout(function() {
+            preloader.classList.add('hidden');
+            document.body.classList.remove('preloader-active');
+            setTimeout(function() {
+                preloader.style.display = 'none';
+            }, 600);
+        }, 3000);
+    }
+
     // ============ NAVBAR SCROLL ============
     const navbar = document.querySelector('.navbar');
     const backToTop = document.querySelector('.back-to-top');
@@ -130,18 +143,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ============ SCROLL ANIMATIONS ============
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    const animatedElements = document.querySelectorAll('.animate-on-scroll, .premium-fade-in, .premium-fade-down, .premium-zoom-in, .premium-rotate-in, .premium-slide-up, .premium-glow');
 
     const scrollObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animated');
+                if (entry.target.classList.contains('premium-fade-in') || entry.target.classList.contains('premium-fade-down') ||
+                    entry.target.classList.contains('premium-zoom-in') || entry.target.classList.contains('premium-rotate-in') ||
+                    entry.target.classList.contains('premium-slide-up') || entry.target.classList.contains('premium-glow')) {
+                    entry.target.style.animationPlayState = 'running';
+                }
                 scrollObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
     animatedElements.forEach(function(el) {
+        if (el.classList.contains('premium-fade-in') || el.classList.contains('premium-fade-down') ||
+            el.classList.contains('premium-zoom-in') || el.classList.contains('premium-rotate-in') ||
+            el.classList.contains('premium-slide-up') || el.classList.contains('premium-glow')) {
+            el.style.animationPlayState = 'paused';
+        }
         scrollObserver.observe(el);
     });
 
