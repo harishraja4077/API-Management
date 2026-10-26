@@ -527,8 +527,9 @@ body.no-scroll {
 }
 
 .stat-label {
-    color: var(--gray);
+    color: var(--white);
     font-size: 14px;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-top: 5px;
@@ -1601,7 +1602,6 @@ body.no-scroll {
     overflow: hidden;
     position: relative;
     height: 300px;
-    cursor: pointer;
 }
 
 .facility-card img {
@@ -2370,7 +2370,6 @@ body.no-scroll {
     overflow: hidden;
     position: relative;
     height: 280px;
-    cursor: pointer;
     box-shadow: var(--shadow);
 }
 
